@@ -1,3 +1,3 @@
 pascal's triangle
 
-![Pascal's  Triangle](images.png)
+![Pascal's  Triangle](images/images.png)
