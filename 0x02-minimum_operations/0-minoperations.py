@@ -1,22 +1,41 @@
 #!/usr/bin/python3
 
 
-"""
-    The letter H is the only character in a text file.
-    There are only two operations that your text editor can do on 
-	this file: Copy All and Paste. Write a method that calculates 
-	given a number n.
-    the least amount of processes necessary to produce exactly 
-	n H characters in the file.
-"""
+''' A module that returns the minimum Operations it takes to
+    get to n characters.
+
+    Available operations:
+        copy
+        paste
+'''
 
 
 def minOperations(n):
-    nOpe = 0
-    minOpe = 2
-    while n > 1:
-        while n % minOpe == 0:
-            nOpe += minOpe
-            n /= minOpe
-        minOpe += 1
-    return nOpei
+    '''
+    returns the minimum operations to get n H's
+    '''
+    min_operations = 0
+
+    if n <= 1:
+        return min_operations
+
+    for i in range(2, n + 1):
+        while n % i == 0:
+            min_operations += i
+            n /= i
+
+    return min_operations
+
+
+if __name__ == '__main__':
+    from random import randint
+    from time import time
+
+    start_time = time()
+
+    for i in range(10):
+        n = randint(2, 100)
+        print("Min # of operations to reach {} char: {}".
+              format(n, minOperations(n)))
+
+    print(f'==> Program completed in {time() - start_time:.3f}s')
