@@ -1,6 +1,5 @@
 # nqueens
 ![nq](https://github.com/michaelabiaw/alx-interview/assets/83102581/3912c89c-ace4-4993-b102-9db30fb48b5b)
-
 # Requirements
 ## General
 
